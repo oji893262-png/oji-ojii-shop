@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terminal — Portfolio</title>
+<style>
+:root{--a:#22c55e;--b:#38bdf8;--bg:#07070b;--card:#101017;--muted:#a3a3ad;--line:#24242f}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,color-mix(in srgb,var(--b) 18%,transparent),transparent 30%),var(--bg);color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-weight:900;letter-spacing:.08em} nav .links{display:flex;gap:24px;color:#bbb;font-size:14px}
+.btn{display:inline-block;padding:13px 19px;border-radius:999px;background:linear-gradient(90deg,var(--a),var(--b));color:#050509;font-weight:800;box-shadow:0 0 35px color-mix(in srgb,var(--a) 20%,transparent)}
+.hero{min-height:75vh;display:grid;place-items:center;text-align:center;padding:70px 0 90px;position:relative;overflow:hidden}
+.glow{position:absolute;width:380px;height:380px;border-radius:50%;background:var(--b);filter:blur(130px);opacity:.15}
+.hero h1{font-size:clamp(48px,9vw,100px);line-height:.92;margin:20px 0;background:linear-gradient(100deg,#fff 30%,var(--a),var(--b));-webkit-background-clip:text;color:transparent;letter-spacing:-.06em}
+.eyebrow{color:var(--a);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+.hero p{max-width:650px;margin:25px auto;color:var(--muted);font-size:18px;line-height:1.7}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.ghost{padding:12px 18px;border:1px solid var(--line);border-radius:999px;color:#ddd}
+section{padding:80px 0} .section-title{font-size:38px;margin:0 0 12px;letter-spacing:-.04em}
+.sub{color:var(--muted);max-width:620px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.card{background:linear-gradient(145deg,#12121b,#0d0d12);border:1px solid var(--line);border-radius:24px;padding:26px;min-height:190px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--a) 45%,var(--line))}
+.thumb{height:150px;border-radius:17px;margin-bottom:20px;background:radial-gradient(circle at 25% 30%,var(--a),transparent 28%),radial-gradient(circle at 75% 70%,var(--b),transparent 30%),#171720}
+.card h3{margin:5px 0 10px} .card p{color:var(--muted);line-height:1.6}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
+.panel{border:1px solid var(--line);border-radius:26px;padding:30px;background:#0d0d13}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.stat{padding:18px;border-radius:17px;background:#15151d;text-align:center} .stat b{font-size:25px;display:block}
+.cta{text-align:center;border:1px solid var(--line);border-radius:32px;padding:65px 25px;background:radial-gradient(circle at 50% 0%,color-mix(in srgb,var(--b) 20%,transparent),transparent 50%),#0d0d13}
+footer{padding:30px 0 45px;color:#777;font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:750px){nav .links{display:none} .hero{min-height:72vh;padding-top:35px} .grid,.about{grid-template-columns:1fr} .stats{grid-template-columns:1fr 1fr 1fr} section{padding:60px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="logo">YOUR<span style="color:var(--a)">.</span>NAME</div>
+<div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+
+<main>
+<section class="hero"><div class="glow"></div><div style="position:relative">
+<div class="eyebrow">Digital Creator · Portfolio</div>
+<h1>Terminal</h1>
+<p>A developer-style portfolio inspired by terminals and command lines. Replace this text with your own one-line promise and make visitors understand what you create.</p>
+<div class="buttons"><a class="btn" href="#work">View my work</a><a class="ghost" href="#contact">Let's talk →</a></div>
+</div></section>
+
+<section id="work"><div class="eyebrow">Selected work</div><h2 class="section-title">Things I've created.</h2><p class="sub">Show your strongest projects here. Keep the descriptions short and let the visuals do the selling.</p>
+<div class="grid">
+<div class="card"><div class="thumb"></div><h3>Project One</h3><p>A short description of your project and the result it delivered.</p></div>
+<div class="card"><div class="thumb"></div><h3>Project Two</h3><p>Another project, experiment, design or digital product.</p></div>
+<div class="card"><div class="thumb"></div><h3>Project Three</h3><p>Show variety while keeping your portfolio focused.</p></div>
+</div></section>
+
+<section id="about"><div><div class="eyebrow">About me</div><h2 class="section-title">I turn ideas into digital things.</h2><p class="sub">Write 2–4 sentences about yourself, your skills and what you can help people create.</p>
+<div class="stats"><div class="stat"><b>20+</b><span>Projects</span></div><div class="stat"><b>3+</b><span>Skills</span></div><div class="stat"><b>100%</b><span>Passion</span></div></div></div>
+<div class="panel"><h3>What I do</h3><p class="sub">Web design<br>AI visuals<br>Creative projects<br>Game / app concepts<br>Freelance digital work</p></div></section>
+
+<section id="contact"><div class="cta"><div class="eyebrow">Available for projects</div><h2 class="section-title">Have an idea?</h2><p class="sub" style="margin:0 auto 25px">Tell me what you're building and let's make it real.</p><a class="btn" href="mailto:you@example.com">Contact me</a></div></section>
+</main>
+<footer>© 2026 YOUR NAME · Built with Terminal</footer>
+</div>
+</body></html>
